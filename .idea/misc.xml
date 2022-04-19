@@ -11,6 +11,8 @@
         <entry key="..\:/Users/engen/Desktop/assets_instagram/ic_insta_home.xml" value="0.173" />
         <entry key="..\:/Users/engen/Desktop/assets_instagram/ic_insta_profile.xml" value="0.173" />
         <entry key="..\:/Users/engen/Desktop/assets_instagram/ic_insta_search.xml" value="0.173" />
+        <entry key="app/src/main/res/layout/activity_login.xml" value="0.19630192502532928" />
+        <entry key="app/src/main/res/layout/button_loading.xml" value="0.19630192502532928" />
       </map>
     </option>
   </component>
