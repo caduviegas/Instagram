@@ -11,8 +11,25 @@
         <entry key="..\:/Users/engen/Desktop/assets_instagram/ic_insta_home.xml" value="0.173" />
         <entry key="..\:/Users/engen/Desktop/assets_instagram/ic_insta_profile.xml" value="0.173" />
         <entry key="..\:/Users/engen/Desktop/assets_instagram/ic_insta_search.xml" value="0.173" />
+        <entry key="app/src/main/res/drawable/top_bottom_border.xml" value="0.21" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.19630192502532928" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/activity_register.xml" value="0.19630192502532928" />
         <entry key="app/src/main/res/layout/button_loading.xml" value="0.19630192502532928" />
+        <entry key="app/src/main/res/layout/fragment_gallery.xml" value="0.33" />
+        <entry key="app/src/main/res/layout/fragment_home.xml" value="0.37604166666666666" />
+        <entry key="app/src/main/res/layout/fragment_profile.xml" value="0.30867892261650276" />
+        <entry key="app/src/main/res/layout/fragment_register_email.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/fragment_register_name_password.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/layout/fragment_register_photo.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/layout/fragment_register_welcome.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/layout/fragment_search.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/layout/item_post_list.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/item_profile_grid.xml" value="0.30867892261650276" />
+        <entry key="app/src/main/res/layout/item_user_list.xml" value="0.33133817870884996" />
+        <entry key="app/src/main/res/menu/menu_bottom_nav.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/menu/menu_profile.xml" value="0.21822916666666667" />
+        <entry key="app/src/main/res/menu/menu_profile_bottom_nav.xml" value="0.21822916666666667" />
       </map>
     </option>
   </component>
