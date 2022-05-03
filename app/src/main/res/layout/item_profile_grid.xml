@@ -8,8 +8,8 @@
     android:padding="1dp">
 
     <ImageView
-        android:id="@+id/tem_profile_img_grid"
-        android:src="@tools:sample/backgrounds/scenic"
+        android:id="@+id/item_profile_img_grid"
+        tools:src="@tools:sample/backgrounds/scenic"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintStart_toStartOf="parent"
