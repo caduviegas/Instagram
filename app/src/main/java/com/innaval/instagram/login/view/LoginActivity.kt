@@ -2,7 +2,7 @@ package com.innaval.instagram.login.view
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.innaval.instagram.commom.util.TxtWatcher
+import com.innaval.instagram.common.util.TxtWatcher
 import com.innaval.instagram.databinding.ActivityLoginBinding
 import com.innaval.instagram.login.Login
 

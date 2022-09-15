@@ -1,4 +1,4 @@
-package com.innaval.instagram.commom.util
+package com.innaval.instagram.common.util
 
 import android.text.Editable
 import android.text.TextWatcher
