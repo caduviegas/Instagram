@@ -1,14 +1,22 @@
 package com.innaval.instagram.login.view
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Toast
+import com.innaval.instagram.common.base.DependencyInjector
 import com.innaval.instagram.common.util.TxtWatcher
 import com.innaval.instagram.databinding.ActivityLoginBinding
 import com.innaval.instagram.login.Login
+import com.innaval.instagram.login.presentation.LoginPresenter
+import com.innaval.instagram.main.view.MainActivity
+import com.innaval.instagram.register.view.RegisterActivity
 
 class LoginActivity : AppCompatActivity(), Login.View {
 
     private lateinit var binding: ActivityLoginBinding
+
+    override lateinit var presenter: Login.Presenter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -17,22 +25,41 @@ class LoginActivity : AppCompatActivity(), Login.View {
 
         setContentView(binding.root)
 
+        presenter = LoginPresenter(this, DependencyInjector.loginRepository())
+
         with(binding) {
             loginEditEmail.addTextChangedListener(watcher)
+            loginEditEmail.addTextChangedListener(TxtWatcher {
+                displayEmailFailure(null)
+            })
+
             loginEditPassword.addTextChangedListener(watcher)
+            loginEditPassword.addTextChangedListener(TxtWatcher {
+                displayPasswordFailure(null)
+            })
 
             loginBtnEnter.setOnClickListener {
-                // CHAMAR O PRESENTER !!!!
+                presenter.login(loginEditEmail.text.toString(), loginEditPassword.text.toString())
+            }
 
-//        Handler(Looper.getMainLooper()).postDelayed({
-//          loginBtnEnter.showProgress(false)
-//        }, 2000)
+            loginTxtRegister.setOnClickListener {
+                goToRegisterScreen()
             }
         }
     }
 
+    override fun onDestroy() {
+        presenter.onDestroy()
+        super.onDestroy()
+    }
+
     private val watcher = TxtWatcher {
-        binding.loginBtnEnter.isEnabled = it.isNotEmpty()
+        binding.loginBtnEnter.isEnabled = binding.loginEditEmail.text.toString().isNotEmpty()
+                && binding.loginEditPassword.text.toString().isNotEmpty()
+    }
+
+    private fun goToRegisterScreen() {
+        startActivity(Intent(this, RegisterActivity::class.java))
     }
 
     override fun showProgress(enabled: Boolean) {
@@ -48,11 +75,13 @@ class LoginActivity : AppCompatActivity(), Login.View {
     }
 
     override fun onUserAuthenticated() {
-        // IR PARA A TELA PRINCIPAL
+        val intent = Intent(this, MainActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK
+        startActivity(intent)
     }
 
-    override fun onUserUnauthorized() {
-        // MOSTRAR UM ALERTA
+    override fun onUserUnauthorized(message: String) {
+        Toast.makeText(this, message, Toast.LENGTH_LONG).show()
     }
 
 }

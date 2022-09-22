@@ -43,7 +43,7 @@
                 android:layout_gravity="center_horizontal"
                 style="@style/Theme.Instagram.TextViewBase.Form" />
 
-            <com.innaval.instagram.login.view.LoadingButton
+            <com.innaval.instagram.common.view.LoadingButton
                 android:id="@+id/register_btn_next"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

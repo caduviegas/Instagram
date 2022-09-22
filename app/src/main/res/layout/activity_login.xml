@@ -3,8 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/white">
+    android:background="@color/white"
+    android:layout_height="match_parent">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -22,11 +22,11 @@
 
             <ImageView
                 android:id="@+id/login_img_logo"
+                android:layout_marginBottom="48dp"
+                android:src="@drawable/instagram_logo_black"
                 android:layout_width="match_parent"
                 android:layout_height="60dp"
-                android:layout_marginBottom="48dp"
-                android:contentDescription="@null"
-                android:src="@drawable/instagram_logo_black" />
+                android:contentDescription="@null" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/login_edit_email_input"
@@ -36,9 +36,9 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/login_edit_email"
                     style="@style/Theme.Instagram.FormEditText"
-                    android:autofillHints="@null"
                     android:hint="@string/email"
-                    android:inputType="textEmailAddress" />
+                    android:inputType="textEmailAddress"
+                    android:autofillHints="@null" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -50,12 +50,12 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/login_edit_password"
                     style="@style/Theme.Instagram.FormEditText"
-                    android:autofillHints="@null"
                     android:hint="@string/password"
-                    android:inputType="textPassword" />
+                    android:inputType="textPassword"
+                    android:autofillHints="@null" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <com.innaval.instagram.login.view.LoadingButton
+            <com.innaval.instagram.common.view.LoadingButton
                 android:id="@+id/login_btn_enter"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -67,26 +67,26 @@
                 android:layout_height="wrap_content">
 
                 <View
-                    android:layout_width="match_parent"
-                    android:layout_height="1dp"
+                    android:background="@color/gray_border"
                     android:layout_gravity="center"
-                    android:background="@color/gray_border" />
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp" />
 
                 <TextView
                     style="@style/Theme.Instagram.TextViewBase"
-                    android:layout_gravity="center"
+                    android:text="@string/or"
                     android:background="@color/white"
-                    android:padding="8dp"
-                    android:text="@string/or" />
+                    android:layout_gravity="center"
+                    android:padding="8dp" />
             </FrameLayout>
         </LinearLayout>
 
     </ScrollView>
 
     <View
+        android:background="@color/gray_darker"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:background="@color/gray_darker"
         app:layout_constraintBottom_toTopOf="@id/login_txt_register"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
@@ -94,13 +94,14 @@
     <TextView
         android:id="@+id/login_txt_register"
         style="@style/Theme.Instagram.TextViewBase"
+        android:textColor="@color/black"
+        android:text="@string/does_not_have_account"
         android:layout_width="match_parent"
+        android:textAlignment="center"
+        android:background="@color/white"
         android:layout_marginStart="0dp"
         android:layout_marginEnd="0dp"
-        android:background="@color/white"
         android:padding="24dp"
-        android:text="@string/does_not_have_account"
-        android:textAlignment="center"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
